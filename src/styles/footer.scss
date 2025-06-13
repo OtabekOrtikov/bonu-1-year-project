@@ -1,0 +1,46 @@
+.footer {
+  background-color: $green;
+  padding: 35px 0;
+  color: #fff;
+
+  &-content {
+    width: 100%;
+    gap: 20px;
+    @include flex(row, space-between, flex-end);
+
+    &__item {
+      width: 230px;
+      @include flex(column, space-between, center);
+      gap: 20px;
+
+      p {
+        color: rgba(255, 255, 255, 0.7);
+        font-family: 'Source Sans Pro';
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.1875rem; /* 118.75% */
+
+        a {
+          color: rgba(255, 255, 255, 0.7);
+          text-decoration: none;
+          transition: color 0.3s ease-in-out;
+
+          &:hover {
+            text-decoration: underline;
+            color: #fff;
+          }
+        }
+      }
+
+      img {
+        width: 150px;
+        height: auto;
+
+        & + p {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
